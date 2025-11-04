@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block content %}
+<form method='post'>
+    <div class="signup">
+        <h1>Sign Up</h1>
+        <input type='text'name='firstname' placeholder='First name' required/>
+        <input type='text' name='lastname' placeholder='Last name' required/>
+        <input type='email' name='email' placeholder='Email' required/>
+        <input type='text' name='username' placeholder='Username' required/>
+        <input type='password' name='password' placeholder='Password' required/>
+        <input type='password' name='confirmpassword' placeholder='Confirm password' required/>
+        <button type='submit'>Sign Up</button>
+        <p>Already have an Account? <span><a href="{{ url_for('auth.login') }}">Login</a></span></p>
+    </div>
+</form>
+{% endblock content %}
